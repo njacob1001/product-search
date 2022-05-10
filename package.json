@@ -1,33 +1,35 @@
 {
   "name": "meli",
-  "version": "0.1.0",
+  "author": "Jacob Gonzalez",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.0",
-    "@types/node": "^16.11.33",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.3",
+    "@testing-library/user-event": "^14.1.1",
+    "i18next": "^21.8.0",
+    "i18next-browser-languagedetector": "^6.1.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.6.4",
+    "react-i18next": "^11.16.9",
+    "react-query": "^4.0.0-beta.3",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "server": "vite preview",
+    "lint": "lint-staged",
+    "coverage": "vitest run --coverage",
+    "prettier": "prettier --write **/*.{ts,tsx,js,jsx,css,html,json,md,less,scss}",
+    "eslint": "eslint --fix src/**/*.ts{,x}",
+    "eslint:check": "eslint src/**/*.ts{,x}",
+    "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,5 +41,48 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "@vitejs/plugin-react": "^1.3.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "^18.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.8",
+    "vite-tsconfig-paths": "^3.4.1",
+    "vitest": "^0.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/njacob1001/product-search.git"
   }
 }

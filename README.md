@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Product Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado con [Vitejs](https://vitejs.dev/guide/).
 
-## Available Scripts
+## Prerequisitos
 
-In the project directory, you can run:
+- Node >= 14.18.1
 
-### `npm start`
+## Comandos disponibles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+en el proyecto se puede correr:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `yarn start`
 
-### `npm test`
+Inicializa la app en modo de desarrollo
+Puedes acceder en [http://localhost:3000](http://localhost:3000) en el navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La página se recargará con cada cambio que se realice.
 
-### `npm run build`
+Podrás ver errores mostradores por eslint
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `yarn test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ejecuta los archivos de pruebas en modo interactivo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn build`
 
-### `npm run eject`
+Genera la app para producción en la carpeta `dist` lista para ser desplegada.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `yarn eslint:check`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se ejecuta eslint en busca de errores o advertencias en todos los archivos de typescript que esten dentro de la carpeta `src`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Informacion adicional
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Commit message conventions](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit)
+- [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/)

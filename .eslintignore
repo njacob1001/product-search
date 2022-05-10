@@ -1,0 +1,12 @@
+src/registerServiceWorker.js
+src/serviceWorker.ts
+src/setupTests.js
+src/**/__tests__/**
+src/**/*.test.tsx
+build
+node_modules
+public
+templates
+./plopfile.js
+src/reportWebVitals.ts
+src/@types/styled-components/index.ts

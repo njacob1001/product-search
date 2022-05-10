@@ -1,8 +1,12 @@
-import React from 'react'
-import './App.css'
+import { Router } from 'presentation/pages/Router'
+import { GlobalStyled } from 'presentation/theme'
+import './index.css'
 
-function App() {
-  return <div>Meli works!</div>
+export const App = () => {
+  return (
+    <>
+      <Router />
+      <GlobalStyled />
+    </>
+  )
 }
-
-export default App

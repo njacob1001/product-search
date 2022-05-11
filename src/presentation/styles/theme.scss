@@ -1,0 +1,60 @@
+:root {
+  // colors
+  --primary-color: #ffe600;
+  --secondary-color: #3483fa;
+  --gray-dark: #333;
+  --gray: #666;
+  --gray-light: #999;
+  --light: #eee;
+
+  // spaces
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3.25rem;
+  --space-xxl: 5.25rem;
+
+  // fonts
+  --font-size-xs: 0.75rem; // 12px
+  --font-size-s: 0.875rem; // 14px
+  --font-size-m: 1rem; // 16px
+  --font-size-l: 1.125rem; // 18px
+  --font-size-xl: 1.5rem; // 24px
+  --font-size-xxl: 1.75rem; // 28px
+  --font-size-xxxl: 2.875rem; // 46px
+
+  // shape
+  --border-radius: 0.25rem;
+
+  // layout
+  --max-width: 1200px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

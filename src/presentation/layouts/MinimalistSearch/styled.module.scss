@@ -1,0 +1,48 @@
+.Container {
+  flex: 1;
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.ContentWrapper {
+  max-width: var(--max-width);
+  display: flex;
+  width: 100%;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  padding: var(--space-xs) 0px;
+}
+
+.Form {
+  margin: 0px var(--space-md);
+  display: flex;
+  flex: 1;
+}
+
+.Input {
+  font-size: var(--font-size-l);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  flex: 1;
+  color: var(--gray-dark);
+}
+
+.SearchButton {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  padding: 0 var(--space-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    display: block;
+  }
+}

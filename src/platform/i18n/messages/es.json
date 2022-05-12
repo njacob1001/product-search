@@ -1,3 +1,4 @@
 {
-  "page.search.input.placeholder": "Nunca dejes de buscar"
+  "page.search.input.placeholder": "Nunca dejes de buscar",
+  "error.http.generic": "Error al enviar la solicitud, intentalo de nuevo más tarde"
 }

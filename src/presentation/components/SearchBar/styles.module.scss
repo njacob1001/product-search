@@ -3,11 +3,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-  padding: var(--space-xs) 0px;
+  padding: var(--space-xs) var(--space-md);
 }
 
 .Form {
-  margin: 0px var(--space-md);
+  margin-left: var(--space-md);
   display: flex;
   flex: 1;
 }

@@ -10,14 +10,18 @@ import { SearchableLayout } from 'presentation/layouts/Searchable'
 const iconSrc = [smallIcon, icon]
 const searchIcon = [smallSearchIcon, mediumSearchIcon]
 
-export const SearchProductWrapper: FC<PropsWithChildren<unknown>> = ({ children }) => {
+interface Props {
+  autofocus?: boolean
+}
+
+export const SearchProductWrapper: FC<PropsWithChildren<Props>> = ({ children, autofocus }) => {
   const { t } = useTranslation()
   const [searchParams] = useSearchParams()
-  const keyword = searchParams.get('keyword') ?? ''
+  const keyword = searchParams.get('search') ?? ''
   const navigate = useNavigate()
 
   const handleSearch = (value: string) => {
-    navigate(`/items?keyword=${value}`)
+    navigate(`/items?search=${value}`)
   }
 
   return (
@@ -27,6 +31,7 @@ export const SearchProductWrapper: FC<PropsWithChildren<unknown>> = ({ children 
       searchIcon={searchIcon}
       onSearch={handleSearch}
       defaultValue={keyword}
+      autofocus={autofocus}
     >
       {children}
     </SearchableLayout>

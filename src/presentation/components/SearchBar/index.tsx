@@ -1,4 +1,5 @@
 import { FC, FormEventHandler, useMemo, useRef } from 'react'
+import { convertToSrcSet } from 'utils/parseSrcset'
 import styles from './styles.module.scss'
 
 export interface SearchBarProps {
@@ -7,14 +8,22 @@ export interface SearchBarProps {
   searchIcon: string[]
   onSearch: (value: string) => void
   defaultValue?: string
+  autofocus?: boolean
 }
 
-export const SearchBar: FC<SearchBarProps> = ({ icon, searchIcon, onSearch, placeholder, defaultValue }) => {
+export const SearchBar: FC<SearchBarProps> = ({
+  icon,
+  searchIcon,
+  onSearch,
+  placeholder,
+  defaultValue,
+  autofocus = true,
+}) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const { iconSrc, searchIconSrc } = useMemo(() => {
     return {
-      iconSrc: icon.map((image, index) => `${image} ${index + 1}x`).join(', '),
-      searchIconSrc: searchIcon.map((image, index) => `${image} ${index + 1}x`).join(', '),
+      iconSrc: convertToSrcSet(icon),
+      searchIconSrc: convertToSrcSet(searchIcon),
     }
   }, [icon, searchIcon])
 
@@ -33,7 +42,7 @@ export const SearchBar: FC<SearchBarProps> = ({ icon, searchIcon, onSearch, plac
             maxLength={100}
             type="text"
             placeholder={placeholder}
-            autoFocus
+            autoFocus={autofocus}
             defaultValue={defaultValue}
           />
           <button className={styles.SearchButton} type="submit">

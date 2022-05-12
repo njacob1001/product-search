@@ -1,0 +1,15 @@
+.Container {
+  display: flex;
+  padding: var(--space-md) 0;
+}
+
+.Slug {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-xxs);
+  color: var(--gray-light);
+  font-size: var(--font-size-s);
+  & > span {
+    margin-right: var(--space-xxs);
+  }
+}

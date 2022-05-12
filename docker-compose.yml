@@ -1,0 +1,23 @@
+version: '3'
+services:
+  back:
+    container_name: meliapi
+    image: meliapi:alpha
+    build:
+      context: .
+      dockerfile: back.Dockerfile
+    ports:
+      - '3001:3001'
+    restart: unless-stopped
+
+  front:
+    container_name: melifront
+    image: melifront:beta
+    build:
+      context: .
+      dockerfile: front.Dockerfile
+
+    env_file: .env
+    ports:
+      - '3000:3000'
+    restart: unless-stopped

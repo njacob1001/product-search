@@ -38,7 +38,7 @@ Genera la app para producción en la carpeta `dist` lista para ser desplegada.
 
 Se ejecuta eslint en busca de errores o advertencias en todos los archivos de typescript que esten dentro de la carpeta `src`.
 
-## Informacion adicional
+## Información adicional
 
 - [Commit message conventions](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit)
 - [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/)

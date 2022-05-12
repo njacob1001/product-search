@@ -37,7 +37,9 @@ export const DetailedInformation: FC<Props> = ({
             <div className={styles.ExtraInfo}>{extraInfo}</div>
             <h1 className={styles.Title}>{title}</h1>
             <div className={styles.Price}>{price}</div>
-            <button className={styles.Button}>{textButton}</button>
+            <button className={styles.Button} onClick={onBuy}>
+              {textButton}
+            </button>
           </div>
         </div>
         <div className={styles.DescriptionContainer}>

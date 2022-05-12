@@ -18,16 +18,18 @@
   border-radius: var(--border-radius) 0 0 var(--border-radius);
   flex: 1;
   color: var(--gray-dark);
+  margin: 0;
 }
 
 .SearchButton {
+  margin: 0;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   cursor: pointer;
   padding: 0 var(--space-sm);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: var(--light);
   & > img {
     display: block;
   }

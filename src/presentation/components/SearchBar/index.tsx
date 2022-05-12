@@ -7,6 +7,7 @@ export interface SearchBarProps {
   placeholder: string
   searchIcon: string[]
   onSearch: (value: string) => void
+  onClickLogo: () => void
   defaultValue?: string
   autofocus?: boolean
 }
@@ -18,6 +19,7 @@ export const SearchBar: FC<SearchBarProps> = ({
   placeholder,
   defaultValue,
   autofocus = true,
+  onClickLogo,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const { iconSrc, searchIconSrc } = useMemo(() => {
@@ -34,7 +36,10 @@ export const SearchBar: FC<SearchBarProps> = ({
   return (
     <header className={styles.Header}>
       <div className={styles.ContentWrapper}>
-        <img src={icon[0]} alt="Mercado Libre" srcSet={iconSrc} />
+        <div className={styles.Logo} onClick={onClickLogo}>
+          <img src={icon[0]} alt="Mercado Libre" srcSet={iconSrc} />
+        </div>
+
         <form onSubmit={handleSearch} className={styles.Form}>
           <input
             className={styles.Input}

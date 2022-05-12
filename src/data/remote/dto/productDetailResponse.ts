@@ -15,12 +15,13 @@ interface ProductDetail {
   price: Price
   picture: string
   condition: string
-  free_shipping: string
-  sold_quantity: string
+  freeShipping: boolean
+  soldQuantity: number
   description: string
 }
 
 export interface ProductsDetailResponse {
   author: Author
-  item: ProductDetail[]
+  item: ProductDetail
+  category: string[]
 }

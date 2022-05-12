@@ -1,4 +1,10 @@
 {
   "page.search.input.placeholder": "Nunca dejes de buscar",
-  "error.http.generic": "Error al enviar la solicitud, intentalo de nuevo más tarde"
+  "error.http.generic": "Error al enviar la solicitud, intentalo de nuevo más tarde",
+  "product.description": "Descripción del producto",
+  "buy.now": "Comprar",
+  "sold_one": "{{count}} Vendido",
+  "sold_other": "{{count}} Vendidos",
+  "used": "usado",
+  "new": "nuevo"
 }

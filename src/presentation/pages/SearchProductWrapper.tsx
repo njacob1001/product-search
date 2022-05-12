@@ -24,6 +24,10 @@ export const SearchProductWrapper: FC<PropsWithChildren<Props>> = ({ children, a
     navigate(`/items?search=${value}`)
   }
 
+  const handleLogoClick = () => {
+    navigate('/')
+  }
+
   return (
     <SearchableLayout
       icon={iconSrc}
@@ -32,6 +36,7 @@ export const SearchProductWrapper: FC<PropsWithChildren<Props>> = ({ children, a
       onSearch={handleSearch}
       defaultValue={keyword}
       autofocus={autofocus}
+      onClickLogo={handleLogoClick}
     >
       {children}
     </SearchableLayout>

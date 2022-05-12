@@ -11,11 +11,13 @@ export const SearchableLayout: FC<Props> = ({
   onSearch,
   defaultValue,
   autofocus,
+  onClickLogo,
   children,
 }) => {
   return (
     <main className={styles.Container}>
       <SearchBar
+        onClickLogo={onClickLogo}
         autofocus={autofocus}
         defaultValue={defaultValue}
         icon={icon}

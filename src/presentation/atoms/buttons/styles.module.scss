@@ -1,0 +1,7 @@
+@mixin primary-button {
+  background-color: var(--secondary-color);
+  padding: var(--space-sm);
+  border-radius: var(--border-radius);
+  color: var(--on-secondary-color);
+  cursor: pointer;
+}

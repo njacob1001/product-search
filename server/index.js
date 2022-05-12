@@ -71,8 +71,9 @@ app.get('/api/items/:id', async (req, res) => {
     }
     const { data: itemData } = await axios.get(`https://api.mercadolibre.com/items/${req.params.id}`)
     const { data: itemDescription } = await axios.get(`https://api.mercadolibre.com/items/${req.params.id}/description`)
+    const { data: category } = await axios.get(`https://api.mercadolibre.com/categories/${itemData.category_id}`)
 
-    response.item = {
+    https: response.item = {
       id: itemData.id,
       title: itemData.title,
       price: { amount: itemData.price, currency: itemData.currency_id, decimals: itemData.decimals || 0 },
@@ -82,6 +83,7 @@ app.get('/api/items/:id', async (req, res) => {
       soldQuantity: itemData.sold_quantity,
       description: itemDescription.plain_text,
     }
+    response.category = _.get(category, 'path_from_root', []).map((item) => item.name)
     res.json(response)
   } catch (err) {
     res.status(500).json({

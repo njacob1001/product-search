@@ -1,0 +1,89 @@
+@import '@/presentation/atoms/buttons/styles.module.scss';
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+  max-width: var(--max-width);
+  padding: var(--space-md);
+  padding-top: 0;
+}
+
+.DetailsPaper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  background-color: var(--background);
+  align-items: stretch;
+  padding: var(--space-md);
+  border-radius: var(--border-radius);
+}
+
+.DescriptionRow {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.ImageContainer {
+  width: 100%;
+  max-width: 680px;
+  & > img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+  }
+}
+
+.DetailsColumn {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space-md);
+}
+
+.ExtraInfo {
+  font-size: var(--font-size-s);
+  margin-bottom: var(--space-md);
+}
+
+.Title {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+
+.Price {
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-xxxl);
+  font-weight: 500;
+}
+
+.Button {
+  @include primary-button();
+  margin-top: var(--space-lg);
+  margin-right: var(--space-md);
+  @media screen and (max-width: 768px) {
+    margin-right: unset;
+  }
+}
+
+.DescriptionContainer {
+  margin-top: var(--space-xxl);
+  padding-left: var(--space-md);
+}
+
+.TitleDescription {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-lg);
+}
+
+.Description {
+  white-space: pre-wrap;
+  color: var(--gray);
+  font-size: var(--space-md);
+  max-width: 680px;
+}

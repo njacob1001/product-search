@@ -3,7 +3,7 @@
 Este proyecto fue creado con [Vitejs](https://vitejs.dev/guide/).
 
 [![React version](https://img.shields.io/badge/react%20version-18.1.0-blue)]()
-![Tests main](https://github.com/njacob1001/rumm-geo-api/actions/workflows/main.yml/badge.svg)
+![Tests main](https://github.com/njacob1001/product-search/actions/workflows/main.yml/badge.svg)
 
 ## Prerequisitos
 

@@ -1,3 +1,5 @@
+@import '@/presentation/styles/animations/animations.module.scss';
+
 .Container {
   display: flex;
   width: 100%;
@@ -56,8 +58,29 @@
 }
 
 .AditionalInfo {
-  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
   font-size: var(--font-size-xs);
   color: var(--gray);
   padding-right: var(--space-xxl);
+}
+
+// shimmer
+
+.Animate {
+  @include shimmer-animation();
+}
+
+.TitleBox {
+  height: var(--font-size-xl);
+  width: 15rem;
+}
+
+.AditionalInfoBox {
+  height: var(--font-size-xs);
+  width: 10rem;
+}
+
+.DescriptionBox {
+  height: var(--font-size-l);
+  width: 20rem;
 }

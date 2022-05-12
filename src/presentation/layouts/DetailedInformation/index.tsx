@@ -1,6 +1,8 @@
+import clsx from 'clsx'
 import { Breadcrumb } from 'presentation/components/Breadcrumb'
 import { FC } from 'react'
 import styles from './styles.module.scss'
+import { Shimmer } from './Shimmer'
 
 interface Props {
   description: string
@@ -12,6 +14,7 @@ interface Props {
   breadcrumb: string[]
   textButton: string
   onBuy: () => void
+  isLoading?: boolean
 }
 
 export const DetailedInformation: FC<Props> = ({
@@ -24,8 +27,11 @@ export const DetailedInformation: FC<Props> = ({
   breadcrumb,
   textButton,
   onBuy,
+  isLoading,
 }) => {
-  return (
+  return isLoading ? (
+    <Shimmer />
+  ) : (
     <section className={styles.Container}>
       <Breadcrumb slugs={breadcrumb} />
       <div className={styles.DetailsPaper}>
@@ -37,6 +43,7 @@ export const DetailedInformation: FC<Props> = ({
             <div className={styles.ExtraInfo}>{extraInfo}</div>
             <h1 className={styles.Title}>{title}</h1>
             <div className={styles.Price}>{price}</div>
+
             <button className={styles.Button} onClick={onBuy}>
               {textButton}
             </button>

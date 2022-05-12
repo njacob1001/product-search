@@ -9,7 +9,9 @@ import { SearchProductWrapper } from './SearchProductWrapper'
 export const ProductDetailsPage: FC = () => {
   const { t } = useTranslation()
   const { id } = useParams()
-  const { data } = useQuery(['details', id], async () => Factory.productUseCases().findProductDetails(id || ''))
+  const { data, isLoading } = useQuery(['details', id], async () =>
+    Factory.productUseCases().findProductDetails(id || '')
+  )
 
   const soldText = data?.item?.soldQuantity ? ` - ${t('sold', { count: data.item.soldQuantity })}` : ''
 
@@ -22,9 +24,10 @@ export const ProductDetailsPage: FC = () => {
         extraInfo={`${t(data?.item?.condition ?? ('' as any), { defaultValue: '' })}${soldText}`}
         onBuy={() => {}}
         picture={data?.item.picture || ''}
-        price={`$ ${data?.item.price.amount}`}
+        price={data?.item.price.amount ? `$ ${data?.item.price.amount}` : ''}
         title={data?.item.title || ''}
         textButton={t('buy.now')}
+        isLoading={isLoading}
       />
     </SearchProductWrapper>
   )

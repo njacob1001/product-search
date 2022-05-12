@@ -1,4 +1,9 @@
-@import '@/presentation/atoms/buttons/styles.module.scss';
+@import '@/presentation/styles/buttons/styles.module.scss';
+@import '@/presentation/styles/animations/animations.module.scss';
+
+.Animate {
+  @include shimmer-animation();
+}
 
 .Container {
   display: flex;
@@ -30,6 +35,7 @@
 
 .ImageContainer {
   width: 100%;
+
   max-width: 680px;
   & > img {
     width: 100%;
@@ -43,7 +49,13 @@
 .DetailsColumn {
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding-top: var(--space-md);
+  padding-left: var(--space-lg);
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+  }
 }
 
 .ExtraInfo {
@@ -86,4 +98,40 @@
   color: var(--gray);
   font-size: var(--space-md);
   max-width: 680px;
+}
+
+// shimmer animation
+
+.ImageBox {
+  @include shimmer-animation();
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+
+.ExtraInfoBox {
+  @include shimmer-animation();
+  width: 100%;
+  height: var(--font-size-s);
+}
+.TitleBox {
+  @include shimmer-animation();
+  width: 100%;
+  height: var(--font-size-xl);
+}
+.PriceBox {
+  @include shimmer-animation();
+  width: 100%;
+  height: var(--font-size-xxxl);
+}
+
+.TitleDescriptionBox {
+  @include shimmer-animation();
+  width: 100%;
+  height: var(--space-xxl);
+}
+.DescriptionBox {
+  @include shimmer-animation();
+  width: 100%;
+  height: var(--space-md);
 }

@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { FC, useMemo } from 'react'
 import { convertToSrcSet } from 'utils/parseSrcset'
 import styles from './styles.module.scss'
@@ -47,6 +48,25 @@ export const CardResume: FC<CardResumeProps> = ({
         <div className={styles.Description}>
           <h2>{description}</h2>
         </div>
+      </div>
+    </div>
+  )
+}
+
+export const ShimmerCardResume: FC = () => {
+  return (
+    <div className={styles.Container}>
+      <div className={styles.ImageContainer}>
+        <div className={clsx(styles.Image, styles.Animate)} />
+      </div>
+      <div className={styles.Column}>
+        <div className={styles.TopContainer}>
+          <div className={styles.TitleContainer}>
+            <div className={clsx(styles.Title, styles.TitleBox, styles.Animate)}></div>
+          </div>
+          <span className={clsx(styles.AditionalInfo, styles.AditionalInfoBox, styles.Animate)}></span>
+        </div>
+        <div className={clsx(styles.Description, styles.DescriptionBox, styles.Animate)}></div>
       </div>
     </div>
   )

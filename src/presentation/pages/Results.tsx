@@ -11,7 +11,7 @@ export const ResultsPage: FC = () => {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const keyword = searchParams.get('search') ?? ''
-  const { data } = useQuery(['search', keyword], async () => Factory.productUseCases().findProducts(keyword))
+  const { data, isLoading } = useQuery(['search', keyword], async () => Factory.productUseCases().findProducts(keyword))
 
   const result = useMemo(
     () =>
@@ -34,7 +34,12 @@ export const ResultsPage: FC = () => {
 
   return (
     <SearchProductWrapper autofocus={false}>
-      <ListItemsLayout breadcrumb={data?.categories || []} result={result} onClick={handleClick} />
+      <ListItemsLayout
+        isLoading={isLoading}
+        breadcrumb={data?.categories || []}
+        result={result}
+        onClick={handleClick}
+      />
     </SearchProductWrapper>
   )
 }
